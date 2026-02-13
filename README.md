@@ -44,7 +44,7 @@ weather-app/
 
 1️⃣ Clone the repository:
 
-git clone https://github.com/abinesh-codes/weather-app.git
+git clone https://github.com/abinesh-codes/Weather-App.git
 
 
 2️⃣ Navigate into the project folder:
