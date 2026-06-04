@@ -22,7 +22,7 @@ const DesktopLayout = ({ children }) => {
       <header className="desktop-header glass-panel">
         <div className="header-left">
           <FiCloudRain className="logo-icon animate-pulse" />
-          <span className="logo-text">SkyPulse</span>
+          <span className="logo-text">WeatherSphere</span>
         </div>
 
         <div className="header-center">

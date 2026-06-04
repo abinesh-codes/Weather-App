@@ -1,4 +1,4 @@
-🌤️ SkyPulse - Adaptive Weather Intelligence Platform
+🌤️ WeatherSphere - Adaptive Weather Intelligence Platform
 
 An adaptive, multi-device Weather Intelligence Platform built using React.js that fetches real-time weather data from an external API and displays current weather conditions in a clean, modern, and premium glassmorphism UI optimized for every device category.
 
@@ -29,7 +29,7 @@ An adaptive, multi-device Weather Intelligence Platform built using React.js tha
 ⚡ Vite / Create React App – Project setup
 
 📂 Project Structure
-skypulse/
+weathersphere/
 │
 ├── src/
 │   ├── App.jsx
@@ -49,7 +49,7 @@ git clone https://github.com/abinesh-codes/weather-app.git
 
 2️⃣ Navigate into the project folder:
 
-cd SkyPulse
+cd WeatherSphere
 
 
 3️⃣ Install dependencies:
@@ -783,4 +783,4 @@ Each layout should have:
 
 ### Project Name
 
-**SkyPulse** — *Adaptive Weather Intelligence Platform* 🌦️
+**WeatherSphere** — *Adaptive Weather Intelligence Platform* 🌦️

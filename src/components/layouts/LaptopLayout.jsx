@@ -21,7 +21,7 @@ const LaptopLayout = ({ children }) => {
       <aside className="laptop-sidebar glass-panel">
         <div className="logo-container">
           <FiCloudRain className="logo-icon animate-pulse" />
-          <span className="logo-text">SkyPulse</span>
+          <span className="logo-text">WeatherSphere</span>
         </div>
 
         <nav className="nav-menu">

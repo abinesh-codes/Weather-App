@@ -21,7 +21,7 @@ const TabletLayout = ({ children }) => {
       <header className="tablet-header glass-panel">
         <div className="tablet-logo">
           <FiCloudRain className="logo-icon animate-pulse" />
-          <span className="logo-text">SkyPulse</span>
+          <span className="logo-text">WeatherSphere</span>
         </div>
         
         <nav className="tablet-nav">
