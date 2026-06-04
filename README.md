@@ -5,19 +5,18 @@ A modern weather forecasting platform that provides real-time weather conditions
 ## 🚀 Live Demo
 
 **Deployment Link:**
-https://weather-app-delta-ebon-38.vercel.app/
-
+https://weather-app-git-master-abinesh-r-codes.vercel.app/
 ---
 
 ## 📸 Application Screenshots
 
 ### Dark Theme Dashboard
 
-![Dark Theme](./screenshots/dark-theme.png)
+<img width="1920" height="1080" alt="dark" src="https://github.com/user-attachments/assets/a959f386-4bbe-441a-a81d-fd2f171b122a" />
 
 ### Light Theme Dashboard
 
-![Light Theme](./screenshots/light-theme.png)
+<img width="1920" height="1080" alt="bright" src="https://github.com/user-attachments/assets/afa26d47-4a78-4d5f-8277-e2c1e28e4fac" />
 
 ---
 
@@ -272,23 +271,6 @@ npm install framer-motion
 ```
 
 ---
-
-## 🌐 Deployment
-
-Frontend Deployment:
-
-https://weather-app-delta-ebon-38.vercel.app/
-
----
-## 📸 Application Screenshots
-
-Dark Theme of the weather app
-
-<img width="1920" height="1080" alt="dark" src="https://github.com/user-attachments/assets/a959f386-4bbe-441a-a81d-fd2f171b122a" />
-
-Bright Theme of the weather app
-
-<img width="1920" height="1080" alt="bright" src="https://github.com/user-attachments/assets/afa26d47-4a78-4d5f-8277-e2c1e28e4fac" />
 
 
 ## ⭐ Support the Project
