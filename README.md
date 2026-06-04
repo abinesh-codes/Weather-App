@@ -1,786 +1,298 @@
-🌤️ WeatherSphere - Adaptive Weather Intelligence Platform
+# 🌦️ WeatherSphere – Adaptive Weather Intelligence Platform
 
-An adaptive, multi-device Weather Intelligence Platform built using React.js that fetches real-time weather data from an external API and displays current weather conditions in a clean, modern, and premium glassmorphism UI optimized for every device category.
+A modern weather forecasting platform that provides real-time weather conditions, hourly forecasts, weekly forecasts, air quality monitoring, weather metrics, and adaptive user interfaces optimized for Mobile, Tablet, Laptop, and Large Screen devices.
 
-🚀 Features
+## 🚀 Live Demo
 
-🔍 Search weather by city name
+**Deployment Link:**
+https://weather-app-delta-ebon-38.vercel.app/
 
-🌡️ Displays current temperature
+---
 
-🌤️ Shows weather condition (Cloudy, Rainy, Sunny, etc.)
+## 📸 Application Screenshots
 
-💨 Wind speed information
+### Dark Theme Dashboard
 
-💧 Humidity details
+![Dark Theme](./screenshots/dark-theme.png)
 
-🎨 Responsive and user-friendly UI
+### Light Theme Dashboard
 
-⚡ Real-time API data fetching
+![Light Theme](./screenshots/light-theme.png)
 
-🛠️ Technologies Used
+---
 
-⚛️ React.js – Frontend framework
+## 🚀 Overview
 
-🌐 REST API – Fetching live weather data
+WeatherSphere is an advanced weather intelligence platform built using React.js that delivers real-time weather information through an adaptive multi-device interface.
 
-🎨 CSS3 – Styling and layout
+The application dynamically adjusts its layout based on screen size, providing unique user experiences for mobile phones, tablets, laptops, and large displays.
 
-⚡ Vite / Create React App – Project setup
+Users can monitor:
 
-📂 Project Structure
-weathersphere/
+* Current Weather Conditions
+* Hourly Forecast
+* Weekly Forecast
+* Air Quality Index (AQI)
+* UV Index
+* Humidity & Dew Point
+* Wind Speed & Direction
+* Visibility
+* Atmospheric Pressure
+* Sunrise & Sunset
+* Moon Phase
+* Saved Cities
+* Dark & Light Themes
+
+---
+
+## 📁 Project Structure
+
+```text
+WEATHERSPHERE/
+│
+├── public/
 │
 ├── src/
+│   ├── assets/                 # Images, icons, animations
+│   │
+│   ├── components/
+│   │   ├── CurrentWeather/
+│   │   ├── HourlyForecast/
+│   │   ├── WeeklyForecast/
+│   │   ├── WeatherMetrics/
+│   │   ├── AQI/
+│   │   ├── Wind/
+│   │   ├── Humidity/
+│   │   └── ThemeSwitcher/
+│   │
+│   ├── layouts/
+│   │   ├── MobileLayout.jsx
+│   │   ├── TabletLayout.jsx
+│   │   ├── LaptopLayout.jsx
+│   │   └── DesktopLayout.jsx
+│   │
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Radar.jsx
+│   │   ├── SavedCities.jsx
+│   │   └── Settings.jsx
+│   │
+│   ├── services/
+│   │   ├── weatherApi.js
+│   │   └── geolocationApi.js
+│   │
+│   ├── context/
+│   │   └── WeatherContext.jsx
+│   │
 │   ├── App.jsx
-│   ├── Weather.jsx
 │   ├── main.jsx
-│   ├── index.css
-│   └── Weather.css
+│   └── index.css
 │
-└── package.json
-
-🔧 Installation & Setup
-
-1️⃣ Clone the repository:
-
-git clone https://github.com/abinesh-codes/weather-app.git
-
-
-2️⃣ Navigate into the project folder:
-
-cd WeatherSphere
-
-
-3️⃣ Install dependencies:
-
-npm install
-
-
-4️⃣ Start the development server:
-
-npm run dev
-
-🔑 API Integration
-
-This project uses a weather API (e.g., OpenWeather API) to fetch live weather data.
-
-Make sure to create your own API key.
-
-Store the API key securely (preferably using environment variables).
-
-Example:
-
-const apiKey = "YOUR_API_KEY";
-
-🎯 Purpose of the Project
-
-This project was developed to practice:
-
-React Hooks (useState, useEffect)
-
-API integration
-
-Asynchronous data fetching
-
-Component-based architecture
-
-Responsive UI design
-
----
-
-# Responsive Design Requirements (Mandatory)
-
-The entire Weather Application must be **fully responsive and adaptive across all devices and screen sizes**. The UI should automatically adjust layouts, typography, spacing, and component sizes without breaking or causing horizontal scrolling.
-
-## Supported Screen Sizes
-
-### Mobile Devices
-
-* Small Mobile: 320px – 375px
-* Standard Mobile: 376px – 480px
-* Large Mobile: 481px – 767px
-
-### Tablets
-
-* Portrait Tablet: 768px – 991px
-* Landscape Tablet: 992px – 1199px
-
-### Laptops
-
-* Small Laptop: 1200px – 1366px
-* Standard Laptop: 1367px – 1600px
-
-### Large Screens
-
-* Desktop: 1601px – 1920px
-* Ultra-wide Monitors: 1921px+
-
----
-
-# Responsive Layout System
-
-## Mobile First Development
-
-Build the application using a **Mobile-First Approach**:
-
-```css
-320px → 480px → 768px → 1024px → 1440px → 1920px+
+├── screenshots/
+│   ├── dark-theme.png
+│   └── light-theme.png
+│
+├── package.json
+└── README.md
 ```
 
-Use:
+---
 
-* CSS Grid
-* Flexbox
-* Relative units (rem, %, vw, vh)
-* CSS Clamp()
-* Media Queries
+## 🛠️ Technology Stack
 
-Avoid fixed pixel dimensions wherever possible.
+### Frontend
+
+* React.js
+* Vite
+* CSS3
+* React Router DOM
+* Framer Motion
+* React Icons
+
+### APIs
+
+* OpenWeather API
+* Geolocation API
+
+### State Management
+
+* React Context API
+
+### Deployment
+
+* Vercel
 
 ---
 
-# Dashboard Responsiveness
+## 🔄 Application Workflow
 
-## Mobile Layout
+### 1. Weather Data Collection
 
-Stack all sections vertically:
+* Detects user location using Geolocation API
+* Fetches live weather information
+* Retrieves weather metrics and forecasts
 
-```text
-Current Weather
+### 2. Data Processing
 
-Hourly Forecast
+* Parses API responses
+* Organizes current weather and forecast data
+* Formats weather metrics for visualization
 
-Weekly Forecast
+### 3. Adaptive Rendering
 
-Weather Metrics
+* Detects screen size
+* Loads dedicated layouts
+* Optimizes content density for each device category
 
-AQI
+### 4. User Interaction
 
-Radar Button
-```
+* Search cities
+* Save favorite locations
+* Switch themes
+* Explore forecasts and weather metrics
 
-Features:
+---
 
-* Single column layout
+## 📊 Adaptive Layout Architecture
+
+### Mobile Devices (320px – 767px)
+
+* Single-column design
 * Bottom navigation
 * Swipeable forecast cards
-* Large touch targets
-* Minimum 44px button height
-
----
-
-## Tablet Layout
-
-```text
-Current Weather
-
-Hourly Forecast
-
-Weekly Forecast
-
-Weather Metrics (2 columns)
-```
-
-Features:
-
-* Two-column metric cards
-* Larger forecast sections
-* Better spacing
-
----
-
-## Desktop Layout
-
-```text
-------------------------------------------------
-Current Weather        |   Weather Metrics
-------------------------------------------------
-Hourly Forecast
-------------------------------------------------
-Weekly Forecast
-------------------------------------------------
-Radar | AQI | Alerts
-------------------------------------------------
-```
-
-Features:
-
-* Multi-column dashboard
-* Side-by-side cards
-* Larger visualizations
-
----
-
-# Weather Metrics Grid
-
-Automatically adjust columns:
-
-```css
-Mobile:
-1 Column
-
-Tablet:
-2 Columns
-
-Laptop:
-3 Columns
-
-Desktop:
-4 Columns
-
-Ultra-wide:
-5-6 Columns
-```
-
-Use:
-
-```css
-grid-template-columns:
-repeat(auto-fit, minmax(250px, 1fr));
-```
-
----
-
-# Typography Responsiveness
-
-Use CSS Clamp for fluid typography:
-
-```css
-Hero Temperature:
-font-size: clamp(3rem, 8vw, 7rem);
-
-Headings:
-font-size: clamp(1.25rem, 3vw, 2.5rem);
-
-Body Text:
-font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-```
-
-Benefits:
-
-* Perfect scaling
-* No oversized text
-* Consistent readability
-
----
-
-# Responsive Navigation
-
-## Mobile
-
-Bottom Navigation Bar
-
-```text
-Home
-Radar
-Cities
-Alerts
-Settings
-```
-
-Fixed at bottom.
-
----
-
-## Tablet
-
-Compact Side Navigation
-
-or
-
-Top Navigation
-
----
-
-## Desktop
-
-Full Navigation Bar
-
-```text
-Logo
-
-Dashboard
-Radar
-Locations
-Alerts
-Settings
-Profile
-```
-
----
-
-# Responsive Forecast Components
-
-## Hourly Forecast
-
-### Mobile
-
-Horizontal swipe cards:
-
-```text
-2 PM
-☀️
-32°
-```
-
-### Tablet/Desktop
-
-Display more cards per row:
-
-```text
-8-12 cards visible
-```
-
-Add smooth scrolling.
-
----
-
-## Weekly Forecast
-
-### Mobile
-
-Compact list:
-
-```text
-Mon ☀️ 24° / 32°
-```
-
-### Desktop
-
-Expanded row:
-
-```text
-Mon | Icon | Condition | Rain % | Low | High | Temp Bar
-```
-
----
-
-# Dynamic Weather Backgrounds
-
-Optimize animations based on device performance.
-
-### Desktop
-
-* Full animations
-* Particle effects
-* Dynamic gradients
-
-### Mobile
-
-* Lightweight animations
-* Reduced particles
-* Optimized rendering
-
-Use:
-
-```javascript
-prefers-reduced-motion
-```
-
-for accessibility.
-
----
-
-# Image & Icon Optimization
-
-Requirements:
-
-* Lazy loading
-* SVG weather icons
-* WebP assets
-* Responsive image sizing
-
-Use:
-
-```html
-srcset
-sizes
-loading="lazy"
-```
-
----
-
-# Touch & Gesture Support
-
-Mobile users should be able to:
-
-* Swipe hourly forecast
-* Swipe saved locations
-* Pull to refresh weather
-* Tap large interactive cards
-
-Minimum touch area:
-
-```css
-44px × 44px
-```
-
----
-
-# Accessibility Requirements
-
-Ensure:
-
-* WCAG 2.1 compliance
-* Keyboard navigation
-* Screen reader support
-* High contrast mode
-* Focus indicators
-* ARIA labels
-
----
-
-# Performance Optimization
-
-Target Scores:
-
-```text
-Lighthouse Performance: 95+
-Accessibility: 100
-Best Practices: 100
-SEO: 100
-```
-
-Implement:
-
-* Code splitting
-* Lazy loading
-* Memoization
-* API response caching
-* Skeleton loaders
-* Optimized animations
-
----
-
-# Final Responsive Goal
-
-The Weather Application must provide a flawless experience on:
-
-* Android phones
-* iPhones
-* Tablets
-* iPads
-* Laptops
-* Desktop monitors
-* Ultra-wide displays
-* 4K screens
-
-with no layout breaking, no overflow issues, smooth animations, fast loading times, and a consistent premium user experience across all devices.
-
----
-
-# Adaptive Multi-Device UI System (Not Just Responsive)
-
-**Important:** Do not simply resize the same layout for different screen sizes. Each device category must have its own unique UI experience optimized for how users interact with that device.
-
-The application follows an **Adaptive Design Architecture**, where Mobile, Tablet, Laptop, and Large Screens have distinctly different layouts, navigation patterns, and information hierarchy.
-
----
-
-# 1. Mobile UI (320px – 767px)
-
-### Design Philosophy
-
-Mobile users need quick weather information with one-handed navigation.
-
-### Layout Style
-
-```text
-┌─────────────────┐
-│     Chennai     │
-│     31°C ☀️      │
-│ Feels Like 35°C │
-└─────────────────┘
-
-Hourly Forecast
-◄ Swipe Cards ►
-
-Weekly Forecast
-Scrollable Cards
-
-Weather Metrics
-Stacked Cards
-
-Bottom Navigation
-Home | Radar | AQI | Alerts
-```
-
-### Features
-
-* Single-column layout
-* Large hero weather card
-* Swipe-based navigation
-* Bottom navigation bar
-* Floating search button
-* Compact metric cards
 * Touch-optimized interactions
-* Vertical scrolling experience
 
-### Navigation
-
-```text
-Home
-Radar
-Alerts
-Cities
-Settings
-```
-
-Fixed at bottom.
-
-### User Experience
-
-Think:
-
-* Google Weather
-* Apple Weather
-* Mobile-first simplicity
-
----
-
-# 2. Tablet UI (768px – 1199px)
-
-### Design Philosophy
-
-Tablet users consume more information and often use landscape mode.
-
-### Layout Style
-
-```text
-┌─────────────────────────────┐
-│      Current Weather        │
-└─────────────────────────────┘
-
-┌─────────────┬─────────────┐
-│ Hourly      │ Weekly      │
-│ Forecast    │ Forecast    │
-└─────────────┴─────────────┘
-
-┌─────────────┬─────────────┐
-│ AQI         │ Humidity    │
-├─────────────┼─────────────┤
-│ UV          │ Wind        │
-└─────────────┴─────────────┘
-```
-
-### Features
+### Tablets (768px – 1199px)
 
 * Two-column dashboard
-* Larger cards
-* Side-by-side forecast sections
-* Floating weather radar widget
-* Expanded metric cards
+* Expanded weather cards
+* Side-by-side forecasts
 
-### Navigation
+### Laptops (1200px – 1600px)
 
-Top Navigation Bar
-
-```text
-Dashboard
-Radar
-Locations
-Alerts
-```
-
-### User Experience
-
-Think:
-
-* iPad weather dashboard
-* Information-rich interface
-
----
-
-# 3. Laptop UI (1200px – 1600px)
-
-### Design Philosophy
-
-Laptop users expect a professional dashboard with multiple panels visible simultaneously.
-
-### Layout Style
-
-```text
-┌───────────────────────────────┐
-│ Navigation Bar                │
-└───────────────────────────────┘
-
-┌─────────────┬─────────────┐
-│ Current     │ Weather     │
-│ Weather     │ Metrics     │
-└─────────────┴─────────────┘
-
-┌─────────────────────────────┐
-│ Hourly Forecast             │
-└─────────────────────────────┘
-
-┌─────────────────────────────┐
-│ Weekly Forecast             │
-└─────────────────────────────┘
-
-┌──────────┬──────────┬────────┐
-│ AQI      │ Radar    │ Alerts │
-└──────────┴──────────┴────────┘
-```
-
-### Features
-
-* Multi-panel dashboard
+* Professional dashboard layout
 * Sidebar navigation
-* Larger forecast visualizations
-* Interactive charts
-* Enhanced weather insights
-* Live radar preview
+* Multi-panel weather insights
 
-### Navigation
+### Large Screens (1600px+)
 
-```text
-Logo
-
-Dashboard
-Forecast
-Radar
-Air Quality
-Locations
-Alerts
-Settings
-```
-
-Left sidebar navigation.
-
-### User Experience
-
-Think:
-
-* Professional analytics dashboard
-* Bloomberg-style weather platform
+* Four-column analytics dashboard
+* Multi-city weather monitoring
+* Weather command center experience
 
 ---
 
-# 4. Large Screens & Ultra-Wide Displays (1600px+)
+## 🎯 Key Features
 
-### Design Philosophy
+### Real-Time Weather Data
 
-Large displays should showcase as much weather information as possible without scrolling.
+* Live weather updates
+* Accurate weather conditions
 
-### Layout Style
+### Hourly Forecast
 
-```text
-┌──────────────────────────────────────────────────┐
-│                    HEADER                        │
-└──────────────────────────────────────────────────┘
+* 24-hour weather timeline
+* Temperature tracking
+* Weather condition indicators
 
-┌──────────┬────────────┬────────────┬────────────┐
-│ Locations│ Current    │ Hourly     │ Weekly     │
-│ Panel    │ Weather    │ Forecast   │ Forecast   │
-└──────────┴────────────┴────────────┴────────────┘
+### Weekly Forecast
 
-┌──────────┬────────────┬────────────┬────────────┐
-│ AQI      │ Wind       │ UV         │ Humidity   │
-└──────────┴────────────┴────────────┴────────────┘
+* 7-day forecast
+* Temperature trends
+* Weather probability analysis
 
-┌──────────────────────────────────────────────────┐
-│ Interactive Weather Radar                        │
-└──────────────────────────────────────────────────┘
+### Weather Metrics Dashboard
 
-┌─────────────┬─────────────┬─────────────────────┐
-│ Alerts      │ Sunrise     │ Smart Insights      │
-└─────────────┴─────────────┴─────────────────────┘
-```
+* Air Quality Index
+* UV Index
+* Humidity
+* Wind Speed
+* Visibility
+* Pressure
+* Dew Point
+* Sunrise & Sunset
+* Moon Phase
 
-### Features
+### Theme Support
 
-* Four-column dashboard
-* Real-time radar always visible
-* Persistent weather metrics
-* Interactive charts
-* Forecast comparison panels
-* Multiple saved cities visible at once
-* No vertical scrolling on first screen
+* Dark Mode
+* Light Mode
 
-### Navigation
+### Adaptive UI
 
-Top Header + Left Sidebar
-
-```text
-Header:
-Logo | Search | Notifications | Profile
-
-Sidebar:
-Dashboard
-Radar
-Forecast
-Cities
-AQI
-Settings
-```
-
-### User Experience
-
-Think:
-
-* Enterprise weather monitoring platform
-* Trading terminal style dashboard
-* NASA weather analytics dashboard
+* Device-specific layouts
+* Mobile-first optimization
+* Responsive design system
 
 ---
 
-# Device-Specific Features
+## 🚀 Getting Started
 
-## Mobile Only
+### Prerequisites
 
-* Swipe navigation
-* Pull-to-refresh
-* Bottom navigation
-* Compact cards
+* Node.js 18+
+* npm
+* OpenWeather API Key
 
-## Tablet Only
+### Installation
 
-* Split-screen forecasts
-* Floating widgets
-* Enhanced gestures
+Clone the repository:
 
-## Laptop Only
-
-* Sidebar navigation
-* Hover interactions
-* Advanced charts
-
-## Large Screens Only
-
-* Multi-city comparison
-* Live radar panel
-* Always-visible analytics
-* Weather command center interface
-
----
-
-# Adaptive UI Requirement
-
-The application must detect screen size and automatically load a dedicated layout:
-
-```javascript
-MobileLayout.jsx
-
-TabletLayout.jsx
-
-LaptopLayout.jsx
-
-DesktopLayout.jsx
+```bash
+git clone https://github.com/abinesh-codes/Weather-App.git
 ```
 
-Each layout should have:
+Navigate to project folder:
 
-* Different component arrangement
-* Different navigation system
-* Different card sizing
-* Different interaction model
-* Different information density
+```bash
+cd Weather-App
+```
 
-**Do not merely scale components. Build four distinct user experiences optimized for Mobile, Tablet, Laptop, and Large Screen users.**
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
 
 ---
 
-### Project Name
+## 🔧 Project Libraries
 
-**WeatherSphere** — *Adaptive Weather Intelligence Platform* 🌦️
+```bash
+npm install react-router-dom
+npm install axios
+npm install react-icons
+npm install framer-motion
+```
+
+---
+
+## 🌐 Deployment
+
+Frontend Deployment:
+
+https://weather-app-delta-ebon-38.vercel.app/
+
+---
+## 📸 Application Screenshots
+
+Dark Theme of the weather app
+
+<img width="1920" height="1080" alt="dark" src="https://github.com/user-attachments/assets/a959f386-4bbe-441a-a81d-fd2f171b122a" />
+
+Bright Theme of the weather app
+
+<img width="1920" height="1080" alt="bright" src="https://github.com/user-attachments/assets/afa26d47-4a78-4d5f-8277-e2c1e28e4fac" />
+
+
+## ⭐ Support the Project
+
+If you found this project useful, consider giving it a star on GitHub. It helps showcase the project and supports future improvements.
+
+### Developed by Abinesh R.
